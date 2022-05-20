@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>계산기</title> 
+
+      <!-- 책 213,214 p -->
+      <style>
+          #num {text-align: right;}
+          button {width: 30px; height: 30px;}
+      </style>
+      
+  </head>
+  <body>
+      <script>
+          var sum = 0
+          function mainfunc(x) {
+              num = document.querySelector("#num")
+              if (x=="="){
+                  s = num.value
+                  num.value =eval(num.value)
+                  s += " = " + num.value
+                  document.querySelector("#msg").innerHTML += "<li>" +s+"</li>"
+              }
+              else if (n == "CE") {
+                  num.value ="" //내용 삭제
+              }
+              else {
+                  num.value += x //키 누적
+              }
+          }
+          
+      </script>
+
+  
+      <input id="num" style="width:120px;" placeholder ="0.0">
+      <div class="keypad hot">
+          <button onclick=" mainfunc(7) ">7</button>
+          <button onclick=" mainfunc(8) ">8</button>
+          <button onclick=" mainfunc(9) ">9</button>
+          <button onclick=" mainfunc(+) ">+</button> <br>
+          <button onclick=" mainfunc(4) ">4</button>
+          <button onclick=" mainfunc(5) ">5</button>
+          <button onclick=" mainfunc(6) ">6</button>
+          <button onclick=" mainfunc(-) ">-</button> <br>
+          <button onclick=" mainfunc(1) ">1</button>
+          <button onclick=" mainfunc(2) ">2</button>
+          <button onclick=" mainfunc(3) ">3</button>
+          <button onclick=" mainfunc(*) ">*</button> <br>
+          <button onclick=" mainfunc(0) ">0</button>
+          <button onclick=" mainfunc(CE) ">CE</button>
+          <button onclick=" mainfunc(=) ">=</button>
+          <button onclick=" mainfunc(/) ">/</button> <br>
+          
+          <h2>결 과 이 력</h2>
+          <ol id="msg"></ol>
+      </div>
+  </body>
+</html>
+
+

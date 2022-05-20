@@ -1,0 +1,37 @@
+- NN의 근간은 logistic Regression
+- 입력값 * 가중치 + 편향 => 예측값(선형회귀)
+	=> Sigmoid()적용 => 성공(=1이 되는 경우)할 확률 -> 가설
+
+X1 X2 OR AND XOR(다르면1)
+0   0   0    0     0
+0   1   1    0     1
+1   0   1    0     1
+1   1   1    1     0
+
+
+==================================================
+
+	활성화함수	loss(손실함수)
+회귀       linear		mse
+이진분류  sigmoid		binary_crossentropy
+다중분류  softmax
+
+
+===================================================
+
+첫 번째 Dense()내 input_shape 값은 X의 칼럼 갯수 지정한다.
+레이어내 모든 Dense의 activation은 relu를 지정한다.
+
+	레이어 내 마지막 Dense의 compile()함수 내 파라미터
+	activation(활성화함수)	loss(손실함수)
+
+회귀	linear(기본이라 생략)	mse / 마지막 Dense의 출력값은 1
+이진분류	sigmoid			binary_crossentropy / 상동
+다중분류 softmax			(sparse_)categorical_crossentropy
+				/ 마지막 Dense의 출력값은 분류 종류갯수
+
+categorical_crossentropy -> 종속변수는 one-hot-encoding형태로 반환
+답이 0 0 1 => 2로 해석
+
+sparse_categorical_crossentropy -> 종속변수는 숫자형태로 반환
+답 2로 반환

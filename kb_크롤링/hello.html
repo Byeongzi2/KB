@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>첫번째 연습 페이지</title> 
+      
+      <!--.fav_drink, .hot : 사용자 정의 스타일 명.  -->
+      <!-- #drink : id 속성이 drink인 태그 -->
+      <style>
+          h1 { color : red;}  
+          h2 { 
+              background : yellow; 
+              color : blue; 
+          }
+          .fav_drink { background: cyan; }
+          .hot { border : 3px dotted red; }
+          #drink { background : gray; }
+      </style>
+  </head>
+  <body>
+
+  	<h1>This is a Heading</h1>
+    <h1>This is a 테스트</h1>
+
+ 	<p>This is a paragraph.</p>
+
+    <hr> <!-- 수평선 태그 (=주제변경의미) -->
+     <!-- id는 page당 하나만 존재해야 함. -->
+    <div id="drink">
+            <!--class="fav_drink" : 적용시킬 스타일 명. 근데 사용하려면 위에 style에서 정의를 해야함.-->
+        <!-- fav_drink hot => 한칸 공백으로 둘 다 작성해서 스타일 적용 가능. -->
+        <h2 class="fav_drink hot">내가 좋아하는 음료</h2> 
+        <p>더 많이 있지만 지금 생각나는 것은 이것뿐.</p>
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+    </div>
+      
+    <div>
+        <h2>내가 좋아하는 음식</h2> 
+        <p>아래는 내가 좋아하는 순서대로 작성.</p>
+        <ol>
+          <li>김치찌개</li>
+          <li>뼈해장국</li>
+          <li>피자</li>
+        </ol>'
+    </div>
+    <div>
+    <h2>음료 설명</h2>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+     </div>
+    
+      <hr>
+      <img src = "https://s.pstatic.net/shopping.phinf/20220328_26/ee87617a-b2d0-449c-9d4f-a42cd79213de.jpg?type=f214_292" alt = "옷">
+      <hr>
+          <a href="http://www.naver.com" target="_blank">네이버</a>
+      <!-- target="_blank" : 독립적인(=새로운) 브라우저를 띄워서 링크 창을 띄운다는 이야기 -->
+      
+      <hr>
+      <table>
+          <thead>
+              <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+              </tr>
+          </tbody>
+    </table>
+  </body>
+</html>
+
+

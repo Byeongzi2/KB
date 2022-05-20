@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Page Title</title>
+        <!-- li:hover = li위에 마우스 커서가 올라오면 의미. -->
+        <!-- form span = form 밑에 있는 span 태그 -->
+        <!-- display: inline = 한줄에 보이도록 -->
+        
+        
+        <style>
+            li:hover { background: yellow; }
+            form span { display : none; }
+            input:focus + span { display: inline; }
+        </style>
+    </head>
+    <body>
+
+        <h1>폼 태그 연습</h1>
+        <form>
+            이름입력 : <input type="text"><span>작성자의 이름 입력</span> <br>
+            암호 : <input type="password"><span>6~8자리 암호를 지정하세요</span> <br>
+            태어난 연도 : <input type="number"><span>4자리 연도를 입력하세요</span>
+        </form>
+
+        <hr>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>            
+            <li>Milk</li>
+
+        </ul>
+    </body>
+</html>
